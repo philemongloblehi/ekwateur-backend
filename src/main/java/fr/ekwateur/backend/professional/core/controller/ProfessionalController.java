@@ -1,5 +1,8 @@
 package fr.ekwateur.backend.professional.core.controller;
 
+import fr.ekwateur.backend.common.enums.CustomerType;
+import fr.ekwateur.backend.invoice.core.adapter.model.InvoiceDto;
+import fr.ekwateur.backend.invoice.core.service.InvoiceService;
 import fr.ekwateur.backend.professional.core.adapter.model.ProfessionalDto;
 import fr.ekwateur.backend.professional.core.service.ProfessionalService;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +18,18 @@ import java.util.List;
 public class ProfessionalController {
 
     private final ProfessionalService professionalService;
+    private final InvoiceService invoiceService;
+
+    @PostMapping("/{id}/invoices")
+    public ResponseEntity<InvoiceDto> invoice(@PathVariable Long id, @RequestBody InvoiceDto invoiceDto) {
+        ProfessionalDto professional = professionalService.findById(id);
+        if (professional == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        invoiceDto.setCustomerId(id);
+        InvoiceDto savedInvoiceDto = invoiceService.create(invoiceDto, CustomerType.PROFESSIONAL);
+        return new ResponseEntity<>(savedInvoiceDto, HttpStatus.CREATED);
+    }
 
     @PostMapping
     public ResponseEntity<ProfessionalDto> create(@RequestBody ProfessionalDto professionalDto) {
