@@ -74,7 +74,7 @@ The app defines following CRUD for Professional model.
 
 The app defines following generate invoice for Particular and Professional model.
     
-    POST /api/particulars/{id}/invoice
-    POST /api/professionals/{id}/invoice
+    POST /api/particulars/{id}/invoices
+    POST /api/professionals/{id}/invoices
 
 You can test them using postman or any other rest client.
