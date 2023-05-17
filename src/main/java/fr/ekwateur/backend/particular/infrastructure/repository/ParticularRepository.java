@@ -13,7 +13,7 @@ public class ParticularRepository {
     private final IParticularRepository repository;
 
     public Particular create(Particular particular) {
-        return repository.save(particular);
+        return repository.insert(particular);
     }
 
     public List<Particular> findAll() {

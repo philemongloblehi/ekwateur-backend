@@ -13,7 +13,7 @@ public class ProfessionalRepository {
     private final IProfessionalRepository repository;
 
     public Professional create(Professional Professional) {
-        return repository.save(Professional);
+        return repository.insert(Professional);
     }
 
     public List<Professional> findAll() {

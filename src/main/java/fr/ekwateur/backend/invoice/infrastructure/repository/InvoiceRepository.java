@@ -11,6 +11,6 @@ public class InvoiceRepository {
     private final IInvoiceRepository repository;
 
     public Invoice create(Invoice invoice) {
-        return repository.save(invoice);
+        return repository.insert(invoice);
     }
 }
