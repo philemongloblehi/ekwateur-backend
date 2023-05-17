@@ -12,7 +12,7 @@ public class CustomerReferenceGeneratorImpl implements ICustomerReferenceGenerat
     private static final String DIGITS = "0123456789";
 
     @Override
-    public String GenerateCustomerReference() {
+    public String generateCustomerReference() {
         Random random = new Random();
         StringBuilder sb = new StringBuilder(ID_LENGTH);
         for (int i = 0; i < ID_LENGTH; i++) {

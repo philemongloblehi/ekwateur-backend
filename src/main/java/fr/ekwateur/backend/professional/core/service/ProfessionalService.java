@@ -22,7 +22,7 @@ public class ProfessionalService implements IProfessionalService {
     @Override
     public ProfessionalDto create(ProfessionalDto professionalDto) {
         Professional professional = mapper.dtoToEntity(professionalDto);
-        professional.setReference(referenceGenerator.GenerateCustomerReference());
+        professional.setReference(referenceGenerator.generateCustomerReference());
         Professional savedProfessional = professionalRepository.create(professional);
         return mapper.entityToDto(savedProfessional);
     }

@@ -22,7 +22,7 @@ public class ParticularService implements IParticularService {
     @Override
     public ParticularDto create(ParticularDto particularDto) {
         Particular entity = mapper.dtoToEntity(particularDto);
-        entity.setReference(referenceGenerator.GenerateCustomerReference());
+        entity.setReference(referenceGenerator.generateCustomerReference());
         Particular savedPaticular = particularRepository.create(entity);
         return mapper.entityToDto(savedPaticular);
     }
