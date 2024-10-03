@@ -1,6 +1,6 @@
 ![Ekwateur](https://lenergeek.com/wp-content/uploads/2017/01/ekwateur.png)
 
-Build Restful CRUD API for a simple Student application using Spring Boot, Mysql, JPA and Hibernate.
+Build Restful CRUD API for a simple Ekwateur application using Spring Boot, Mysql, JPA and Hibernate.
 
 ## Requirements
 
