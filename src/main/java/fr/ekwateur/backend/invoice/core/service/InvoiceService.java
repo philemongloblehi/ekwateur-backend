@@ -1,13 +1,11 @@
 package fr.ekwateur.backend.invoice.core.service;
 
 import fr.ekwateur.backend.common.enums.CustomerType;
-import fr.ekwateur.backend.common.enums.EnergyType;
 import fr.ekwateur.backend.invoice.core.adapter.mapper.InvoiceMapper;
 import fr.ekwateur.backend.invoice.core.adapter.model.InvoiceDto;
 import fr.ekwateur.backend.invoice.core.domain.Invoice;
 import fr.ekwateur.backend.invoice.core.port.IInvoiceService;
 import fr.ekwateur.backend.invoice.infrastructure.repository.InvoiceRepository;
-import fr.ekwateur.backend.particular.core.domain.Particular;
 import fr.ekwateur.backend.particular.infrastructure.repository.ParticularRepository;
 import fr.ekwateur.backend.professional.core.domain.Professional;
 import fr.ekwateur.backend.professional.infrastructure.repository.ProfessionalRepository;

@@ -5,7 +5,6 @@ import fr.ekwateur.backend.invoice.core.adapter.model.InvoiceDto;
 import fr.ekwateur.backend.invoice.core.service.InvoiceService;
 import fr.ekwateur.backend.particular.core.adapter.model.ParticularDto;
 import fr.ekwateur.backend.particular.core.service.ParticularService;
-import fr.ekwateur.backend.professional.core.adapter.model.ProfessionalDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
